@@ -1,28 +1,41 @@
-const mongoose = require('mongoose');
-
-const { Schema } = mongoose;
+const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
-const Book = require('./Book');
 
 const userSchema = new Schema({
     username: {
         type: String,
         required: true,
+        unique: true,
         trim: true
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        match: [/.+@.+\..+/, 'Please enter a valid email address']
     },
     password: {
         type: String,
         required: true,
         minlength: 5
     },
-    orders: [Order.schema],
-    books: [Book.schema]
+    posts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Post'
+        }
+    ],
+    friends: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }
+    ]
+},
+{
+    toJSON: {
+        virtuals: true
+    }
 });
 
 // set up pre-save middleware to create password
@@ -40,6 +53,6 @@ userSchema.methods.isCorrectPassword = async function(password) {
     return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
