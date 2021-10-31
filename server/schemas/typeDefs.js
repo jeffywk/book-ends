@@ -2,6 +2,13 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql `
     
+    type Thought {
+        _id: ID
+        thoughtText: String
+        createdAt: String
+        username: String
+        reactionCount: Int
+    }
     type Book {
         _id: ID
         title: String
