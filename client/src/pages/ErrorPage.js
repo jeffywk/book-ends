@@ -3,7 +3,7 @@ import React from 'react';
 const NoMatch = () => {
   return (
     <div>
-      Oops, we couldn't find that page.
+      Well this is embaressing, we had some difficulty locating the page you requested..
     </div>
   );
 };
