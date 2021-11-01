@@ -24,6 +24,7 @@ const PostList = ({ posts, title }) => {
                     <Link to={`/post/${post._id}`}>
                         <p>{post.postText}</p>
                         <p>
+                            {/* if there are comments, display 'see'; if not, display 'start' */}
                             Comments: {post.commentCount} || Click to{' '}
                             {post.commentCount ? 'see' : 'start'} the discussion!
                         </p>
