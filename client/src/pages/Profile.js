@@ -53,9 +53,9 @@ const Profile = () => {
     return (
         <div>
             <div>
-                {/* if userParam does not have a value, display 'viewing your profile'; if it does have a value, display user's username */}
+                {/* if userParam does not have a value, display 'your profile'; if it does have a value, display user's username */}
                 <h2>
-                    Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+                    {userParam ? `${user.username}'s` : 'your'} profile
                 </h2>
 
                 {userParam && (

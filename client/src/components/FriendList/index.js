@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FriendList = ({ friendCount, username, friends }) => {
     // if user has no friends, encourage them to make some
     if (!friends || !friends.length) {
-        return <p>{username}, make some friends!</p>;
+        return <p>{username} has no friends yet!</p>;
     }
 
     return (
