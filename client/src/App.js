@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import SinglePost from './pages/SinglePost';
 import Profile from './pages/Profile';
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
