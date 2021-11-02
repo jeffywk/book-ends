@@ -30,7 +30,7 @@ const SinglePost = props => {
                     <span>
                         {post.username}
                     </span>{' '}
-                        posted on {thought.createdAt}
+                        posted on {post.createdAt}
                 </p>
                 <div>
                     <p>{post.postText}</p>
