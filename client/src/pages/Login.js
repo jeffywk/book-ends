@@ -34,7 +34,7 @@ const Login = (props) => {
     };
 
     return (
-        <main>
+        <main className="container">
             <div>
                 <div>
                     <h4>Login</h4>
@@ -47,6 +47,7 @@ const Login = (props) => {
                                 id='email'
                                 value={formState.email}
                                 onChange={handleChange}
+                                className="m-2"
                             />
                             <input
                                 placeholder='Enter password'
@@ -55,8 +56,9 @@ const Login = (props) => {
                                 id='password'
                                 value={formState.password}
                                 onChange={handleChange}
+                                className="m-2"
                             />
-                            <button type='submit'>
+                            <button type='submit' className="btn btn-primary">
                                 Submit
                             </button>
                         </form>

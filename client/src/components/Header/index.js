@@ -9,8 +9,8 @@ const Header = () => {
     };
     
     return (
-        <header>
-            <div>
+        <header className="navbar">
+            <div className="container">
                 <Link to="/">
                     <h1>Book-Ends</h1>
                 </Link>
@@ -18,15 +18,15 @@ const Header = () => {
                 <nav>
                 {Auth.loggedIn() ? (
                     <>
-                    <Link to="/profile">My Profile</Link>
-                    <a href="/" onClick={logout}>
+                    <Link to="/profile" className="m-2">My Profile</Link>
+                    <a href="/" className="m-2" onClick={logout}>
                         Logout
                     </a>
                     </>
                 ) : (
                     <>
-                    <Link to="/login">Login</Link>
-                    <Link to="/signup">Signup</Link>
+                    <Link to="/login" className="m-2">Login</Link>
+                    <Link to="/signup" className="m-2">Signup</Link>
                     </>
                 )}
                 </nav>

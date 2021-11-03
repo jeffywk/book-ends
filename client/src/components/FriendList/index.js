@@ -11,11 +11,11 @@ const FriendList = ({ friendCount, username, friends }) => {
         <div>
             <h5>
                 {/* if user has more than one friend, make plural */}
-                {username}'s {friendCount} {friendCount === 1 ? 'friend' : 'friends'}
+                {username}'s {friendCount} {friendCount === 1 ? 'friend:' : 'friends:'}
             </h5>
             {/* create links to friend's profiles */}
             {friends.map(friend => (
-                <button key={friend._id}>
+                <button key={friend._id} className="btn">
                     <Link to={`/profile/${friend.username}`}>{friend.username}</Link>
                 </button>
             ))}

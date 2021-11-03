@@ -51,7 +51,7 @@ const Profile = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <div>
                 {/* if userParam does not have a value, display 'your profile'; if it does have a value, display user's username */}
                 <h2>
@@ -59,17 +59,17 @@ const Profile = () => {
                 </h2>
 
                 {userParam && (
-                <button onClick={handleClick}>
-                    Add Friend
+                <button onClick={handleClick} className="btn btn-link">
+                    Add {user.username} as a Friend
                 </button>
                 )}
             </div>
 
             <div>
-                <div>
+                <div className="mt-4">
                     <PostList posts={user.posts} title={`${user.username}'s posts:`} />
                 </div>
-                <div>
+                <div className="mt-4">
                     <FriendList
                         username={user.username}
                         friendCount={user.friendCount}

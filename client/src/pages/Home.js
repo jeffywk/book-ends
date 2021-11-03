@@ -19,7 +19,7 @@ const Home = () => {
     const loggedIn = Auth.loggedIn();
 
     return (
-        <main>
+        <main className="container">
             <div>
                 {loggedIn && (
                 <div>

@@ -60,12 +60,13 @@ const PostForm = () => {
                 Character Count: {characterCount}/280
                 {error && <span>Something went wrong...</span>}
             </p>
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} className="form-group">
                 <textarea
                     placeholder="What's on your mind?"
                     onChange={handleChange}
+                    className="form-control"
                 ></textarea>
-                <button type="submit">
+                <button type="submit" className="btn btn-primary mt-2 mb-4">
                     Submit
                 </button>
             </form>

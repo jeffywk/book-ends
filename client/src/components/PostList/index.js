@@ -11,22 +11,24 @@ const PostList = ({ posts, title }) => {
         <h3>{title}</h3>
         {posts &&
             posts.map(post => (
-            <div key={post._id}>
+            <div key={post._id} className="mt-5">
                 <p>
                     <Link
                         to={`/profile/${post.username}`}
                     >
                         {post.username}
                     </Link>{' '}
-                    post on {post.createdAt}
+                    posted on {post.createdAt}
                 </p>
                 <div>
                     <Link to={`/post/${post._id}`}>
                         <p>{post.postText}</p>
                         <p>
-                            {/* if there are comments, display 'see'; if not, display 'start' */}
-                            Comments: {post.commentCount} || Click to{' '}
-                            {post.commentCount ? 'see' : 'start'} the discussion!
+                            {/* if there are comments, display 'Check out'; if not, display 'Start' */}
+                            Comments: {post.commentCount}  
+                            <br />
+                            {' '}
+                            {post.commentCount ? 'Check out' : 'Start'} the discussion!
                         </p>
                     </Link>
                 </div>

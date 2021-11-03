@@ -34,7 +34,7 @@ const Signup = () => {
     };
 
     return (
-        <main>
+        <main className="container">
             <div>
                 <div>
                     <h4>Sign Up</h4>
@@ -47,6 +47,7 @@ const Signup = () => {
                                 id='username'
                                 value={formState.username}
                                 onChange={handleChange}
+                                className="m-2"
                             />
                             <input
                                 placeholder='Enter email'
@@ -55,6 +56,7 @@ const Signup = () => {
                                 id='email'
                                 value={formState.email}
                                 onChange={handleChange}
+                                className="m-2"
                             />
                             <input
                                 placeholder='Enter password'
@@ -63,8 +65,9 @@ const Signup = () => {
                                 id='password'
                                 value={formState.password}
                                 onChange={handleChange}
+                                className="m-2"
                             />
-                            <button type='submit'>
+                            <button type='submit' className="btn btn-primary">
                                 Submit
                             </button>
                         </form>

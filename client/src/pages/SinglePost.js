@@ -24,7 +24,7 @@ const SinglePost = props => {
     }
     
     return (
-        <div>
+        <div className="container">
             <div>
                 <p>
                     <span>
