@@ -5,6 +5,7 @@ import PostForm from '../components/PostForm';
 import { QUERY_POSTS, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
+import Image from 'react-bootstrap/Image'
 
 const Home = () => {
     // use useQuery hook to make query request
@@ -21,6 +22,7 @@ const Home = () => {
     return (
         <main className="container">
             <div>
+            <Image src="..Images/beach.jpg" fluid />
                 {loggedIn && (
                 <div>
                     <PostForm />

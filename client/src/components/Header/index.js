@@ -28,7 +28,8 @@ const Header = () => {
                     <Link to="/login" className="m-2">Login</Link>
                     <Link to="/signup" className="m-2">Signup</Link>
                     </>
-                )}
+
+                  )}
                 </nav>
             </div>
         </header>
