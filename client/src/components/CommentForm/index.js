@@ -33,21 +33,21 @@ const CommentForm = ({ postId }) => {
     };
 
     return (
-        <div>
+        <div className="container">
             <p className={`${characterCount === 280 || error ? 'text-error' : ''}`}>
                 Character Count: {characterCount}/280
                 {error && <span>Something went wrong...</span>}
             </p>
-            <form
+            <form className="form-group"
                 onSubmit={handleFormSubmit}
             >
-                <textarea
+                <textarea className="form-control"
                     placeholder="Leave a comment"
                     value={commentBody}
                     onChange={handleChange}
                 ></textarea>
 
-                <button type="submit">
+                <button type="submit" className="btn btn-primary mt-2 mb-4">
                     Submit
                 </button>
             </form>
